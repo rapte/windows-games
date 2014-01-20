@@ -93,7 +93,7 @@ enum graphics_drivers { DETECT, CGA, MCGA, EGA, EGA64, EGAMONO, IBM8514, HERCMON
                         ATT400, VGA, PC3270 };
 
 // Various modes for each graphics driver
-enum graphics_modes { CGAC0, CGAC1, CGAC2, CGAC3, CGAHI, 
+enum graphics_modes { CGAC0, CGAC1, CGAC2, CGAC3, CGAHI,
                       MCGAC0 = 0, MCGAC1, MCGAC2, MCGAC3, MCGAMED, MCGAHI,
                       EGALO = 0, EGAHI,
                       EGA64LO = 0, EGA64HI,
@@ -242,7 +242,7 @@ int gety( );
 void moverel( int dx, int dy );
 void moveto( int x, int y );
 void refreshbgi(int left, int top, int right, int bottom);
-void refreshallbgi( );    
+void refreshallbgi( );
 void setbkcolor( int color );
 void setcolor( int color );
 void setfillpattern( char *upattern, int color );
@@ -284,7 +284,7 @@ int kbhit( );
 // User-Controlled Window Functions (winbgi.cpp)
 int getcurrentwindow( );
 void setcurrentwindow( int window );
-    
+
 // Double buffering support (winbgi.cpp)
 int getactivepage( );
 int getvisualpage( );
@@ -297,9 +297,9 @@ unsigned imagesize( int left, int top, int right, int bottom );
 void getimage( int left, int top, int right, int bottom, void *bitmap );
 void putimage( int left, int top, void *bitmap, int op );
 void printimage(
-    const char* title=NULL,	
+    const char* title=NULL,
     double width_inches=7, double border_left_inches=0.75, double border_top_inches=0.75,
-    int left=0, int right=0, int right=INT_MAX, int bottom=INT_MAX,
+    int left=0, int right=0, int top=INT_MAX, int bottom=INT_MAX,
     bool active=true, HWND hwnd=NULL
     );
 void readimagefile(
@@ -321,10 +321,10 @@ void settextstyle(int font, int direction, int charsize);
 void setusercharsize(int multx, int divx, int multy, int divy);
 int textheight(char *textstring);
 int textwidth(char *textstring);
-extern std::ostringstream bgiout;    
+extern std::ostringstream bgiout;
 void outstream(std::ostringstream& out=bgiout);
-void outstreamxy(int x, int y, std::ostringstream& out=bgiout);    
-    
+void outstreamxy(int x, int y, std::ostringstream& out=bgiout);
+
 // Mouse Functions (mouse.cpp)
 void clearmouseclick( int kind );
 void clearresizeevent( );

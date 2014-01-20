@@ -1,14 +1,14 @@
 #include <windows.h>
-#include <iostream.h>
+#include <iostream>
 #include <conio.h>
 #include <string>
-#include <fstream.h>
-#include <iomanip.h>
+#include <fstream>
+#include <iomanip>
 #include <stdlib.h>
 #include <time.h>
 //#include <dsound.h>
 #include <mmsystem.h>
-#include "winbgim.h"
+#include "graphics.h"
 #include <stdio.h> // <== must be included if you want to print a number in graphics window.
 #include <math.h>
 
